@@ -28,9 +28,9 @@ build .next directory
 npm run buid  
 ```
 
-run app on localhost:3000
+run app `node server.js` on localhost:3000 
 ```bash
-npm run start
+npm run dev
 ```
 ##
 ###  `getInitialProps` lifecycle method usage: 
