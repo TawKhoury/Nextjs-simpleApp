@@ -33,7 +33,7 @@ run app on localhost:3000
 npm run start
 ```
 ##
-### define the `getInitialProps` lifecycle method for stateless components: 
+###  `getInitialProps` lifecycle method usage: 
 
 ### Example:
 `post.js`
