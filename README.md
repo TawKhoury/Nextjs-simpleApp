@@ -34,29 +34,6 @@ npm run start
 ```
 ##
 ### define the `getInitialProps` lifecycle method for stateless components: 
-`index.js`
-```jsx
-Index.getInitialProps = async function() {
-    const res = await fetch('http://api.tvmaze.com/search/shows?q=batman')
-    const data = await res.json()
-
-    console.log(`Show data fetched. Count: ${data.length}`)
-
-    return {
-        shows: data
-    }
-}
-```
-
-`getInitialProps` receives a context object with the following properties:
-
-- `pathname` - path section of URL
-- `query` - query string section of URL parsed as an object
-- `asPath` - the actual url path
-- `req` - HTTP request object (server only)
-- `res` - HTTP response object (server only)
-- `jsonPageRes` - [Fetch Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) object (client only)
-- `err` - Error object if any error is encountered during the rendering
 
 ### Example:
 `post.js`
@@ -72,11 +49,36 @@ Post.getInitialProps = async function (context) {
     return { show }
 }
 ```
-##
-## change TV information to your website
 
+`getInitialProps` receives a context object with the following properties:
+
+- `pathname` - path section of URL
+- `query` - query string section of URL parsed as an object
+- `asPath` - the actual url path
+- `req` - HTTP request object (server only)
+- `res` - HTTP response object (server only)
+- `jsonPageRes` - [Fetch Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) object (client only)
+- `err` - Error object if any error is encountered during the rendering
+
+
+## change TV information to your website
+##
+`index.js`
 ```jsx
+Index.getInitialProps = async function() {
     const res = await fetch('http://api.tvmaze.com/search/shows?q=batman')
+    const data = await res.json()
+
+    console.log(`Show data fetched. Count: ${data.length}`)
+
+    return {
+        shows: data
+    }
+}
+```
+-Change fetch content:
+```jsx
+    const res = await `fetch('http://api.tvmaze.com/search/shows?q=batman')`
 ```
 to any api from 'http://api.tvmaze.com/search' 
 
