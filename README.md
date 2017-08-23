@@ -32,6 +32,10 @@ run app `node server.js` on localhost:3000
 ```bash
 npm run dev
 ```
+OR 
+```bash
+npm run start
+```
 ##
 ###  `getInitialProps` lifecycle method usage: 
 
