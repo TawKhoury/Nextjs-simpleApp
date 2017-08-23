@@ -62,7 +62,7 @@ Post.getInitialProps = async function (context) {
 
 
 ## change TV information to your website
-##
+
 `index.js`
 ```jsx
 Index.getInitialProps = async function() {
