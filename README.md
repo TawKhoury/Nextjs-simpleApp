@@ -78,7 +78,7 @@ Index.getInitialProps = async function() {
 ```
 -Change fetch content:
 ```jsx
-    const res = await `fetch('http://api.tvmaze.com/search/shows?q=batman')`
+    const res = await fetch('http://api.tvmaze.com/search/shows?q=batman')
 ```
 to any api from 'http://api.tvmaze.com/search' 
 
